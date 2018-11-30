@@ -17,7 +17,7 @@ class Hanson
 {
     public static function messageHandler(Collection $message, Friends $friends, Groups $groups)
     {
-        if ($message['from']['NickName'] === 'HanSon') {
+        if ($message['from']['NickName'] === '邓诗敏') {
             if ($message['type'] === 'text') {
                 if ($message['content'] === 'hi') {
                     Text::send($message['from']['UserName'], 'hi');

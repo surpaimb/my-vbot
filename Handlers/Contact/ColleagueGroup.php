@@ -11,7 +11,7 @@ class ColleagueGroup
 {
     public static function messageHandler(Collection $message, Friends $friends, Groups $groups)
     {
-        if ($message['from']['NickName'] === '三年二班') {
+        if ($message['from']['NickName'] === '瞎聊') {
             if ($message['type'] === 'text' && str_contains($message['content'], '餐费')) {
                 $str = str_replace('餐费', '', $message['content']);
                 $array = explode(' ', $str);

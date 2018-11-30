@@ -12,7 +12,7 @@ class FeedbackGroup
 {
     public static function messageHandler(Collection $message, Friends $friends, Groups $groups)
     {
-        if ($message['from']['NickName'] === 'vbot 反馈群') {
+        if ($message['from']['NickName'] === 'vbot') {
             $experience = '体验流程：
             去到 vbot 的 github 网站，clone 下来，然后 git checkout v2.0 即可。运行命令为 php example.php --session=vbot';
             $rule = '反馈群群规：
@@ -33,7 +33,7 @@ class FeedbackGroup
             }
 
             if ($message['content'] === '名片') {
-                Card::send($message['from']['UserName'], 'hanson1994', 'HanSon大人');
+                Card::send($message['from']['UserName'], 'surpaimb', 'Tuple');
             }
 
             if ($message['content'] === '公众号') {
